@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AGRODRONIA — Fumigación agrícola con drones de precisión en Perú | DJI Agras</title>
+<meta name="description" content="AGRODRONIA brinda servicios de fumigación agrícola, fertilización y esparcido con drones DJI Agras en todo el Perú. Precisión, ahorro y cobertura nacional para arroz, uva, palta, arándano, café y más." />
+<meta name="keywords" content="drones agrícolas Perú, fumigación con drones, DJI Agras Perú, agricultura de precisión, fertilización con drones, esparcido de semillas con drones" />
+<meta property="og:title" content="AGRODRONIA — Tecnología al servicio del campo" />
+<meta property="og:description" content="Fumigación agrícola con drones de alta precisión en Perú." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "AGRODRONIA",
+  "description": "Servicios agrícolas con drones de precisión: fumigación, fertilización, esparcido de semillas e insumos. Cobertura nacional en Perú.",
+  "areaServed": "PE",
+  "slogan": "Tecnología al servicio del campo"
+}
+</script>
+<style>
+  :root{
+    --green-900:#0F3D2E;
+    --green-800:#13503c;
+    --green-600:#1FA463;
+    --green-400:#3FBE7E;
+    --lime:#B7F06A;
+    --lime-soft:#dbf6a6;
+    --bg:#F8FAF6;
+    --bg-soft:#EEF3ED;
+    --ink:#1E1E1E;
+    --ink-2:#3a3f3a;
+    --ink-3:#6b736a;
+    --line:rgba(15,61,46,.10);
+    --line-strong:rgba(15,61,46,.18);
+    --radius:14px;
+    --radius-lg:22px;
+    --maxw:1240px;
+    --shadow-sm:0 1px 2px rgba(15,61,46,.06), 0 1px 0 rgba(15,61,46,.04);
+    --shadow-md:0 12px 30px -12px rgba(15,61,46,.18);
+    --shadow-lg:0 30px 60px -30px rgba(15,61,46,.30);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Manrope', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    font-size:16px;
+    text-wrap:pretty;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--green-600);font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";width:24px;height:1px;background:var(--green-600);display:inline-block;
+  }
+  h1,h2,h3,h4{font-weight:700;letter-spacing:-.02em;margin:0;color:var(--ink);line-height:1.1}
+  h1{font-size:clamp(40px,5.4vw,72px);font-weight:800;letter-spacing:-.035em}
+  h2{font-size:clamp(30px,3.6vw,48px);letter-spacing:-.025em;line-height:1.08}
+  h3{font-size:clamp(20px,1.6vw,22px);letter-spacing:-.01em}
+  p{margin:0;color:var(--ink-2)}
+  .lead{font-size:clamp(16px,1.2vw,18px);color:var(--ink-2);line-height:1.6}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    height:52px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--green-600);color:#fff;box-shadow:var(--shadow-md)}
+  .btn-primary:hover{background:var(--green-900);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+  .btn-lime{background:var(--lime);color:var(--green-900);box-shadow:0 12px 24px -12px rgba(183,240,106,.7)}
+  .btn-lime:hover{background:#a6e34d;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+  .btn-ghost:hover{background:#fff;border-color:var(--green-900);color:var(--green-900)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--green-900)}
+  .btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+  .btn-outline-light:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+  .btn .arrow{display:inline-block;transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(3px)}
+  .btn-small{height:42px;padding:0 16px;font-size:14px}
+
+  /* ---------- NAVBAR ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:background .3s ease, border-color .3s ease, padding .3s ease;
+    padding:14px 0;
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    background:rgba(248,250,246,.75);
+    backdrop-filter:saturate(1.2) blur(14px);
+    -webkit-backdrop-filter:saturate(1.2) blur(14px);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:10px 12px 10px 22px;
+    box-shadow:var(--shadow-sm);
+  }
+  .nav.scrolled .nav-inner{background:rgba(248,250,246,.92)}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:18px}
+  .nav-logo .mark{
+    width:34px;height:34px;border-radius:8px;background:var(--green-900);
+    display:grid;place-items:center;overflow:hidden;
+  }
+  .nav-logo .mark img{width:80%;height:auto;filter:brightness(1.05)}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a{
+    font-size:14px;font-weight:500;color:var(--ink-2);padding:8px 14px;border-radius:999px;
+    transition:color .2s ease, background .2s ease;
+  }
+  .nav-links a:hover{color:var(--green-900);background:rgba(15,61,46,.05)}
+  .nav-cta{display:flex;align-items:center;gap:8px}
+  .nav-burger{display:none;width:42px;height:42px;border-radius:999px;border:1px solid var(--line-strong);align-items:center;justify-content:center}
+  .nav-burger span{width:16px;height:1.5px;background:var(--ink);position:relative;display:block}
+  .nav-burger span::before,.nav-burger span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink)}
+  .nav-burger span::before{top:-5px}.nav-burger span::after{top:5px}
+  @media (max-width:960px){
+    .nav-links,.nav .btn-ghost{display:none}
+    .nav-burger{display:flex}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:radial-gradient(120% 80% at 80% 0%, #18563f 0%, var(--green-900) 60%, #0a2c20 100%);
+    color:#fff;
+    overflow:hidden;
+    padding:140px 0 0;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(closest-side at 18% 30%, rgba(183,240,106,.18), transparent 70%),
+      radial-gradient(closest-side at 92% 70%, rgba(31,164,99,.30), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
+    padding:50px 0 80px;
+  }
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:36px;padding-bottom:40px}}
+  .hero h1{color:#fff;max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--lime);font-weight:800}
+  .hero-sub{color:rgba(255,255,255,.78);font-size:18px;line-height:1.6;max-width:52ch;margin-top:22px}
+  .hero-note{color:rgba(255,255,255,.55);font-size:14px;margin-top:14px}
+  .hero-cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 14px;border-radius:999px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    font-size:13px;color:rgba(255,255,255,.88);font-weight:500;
+  }
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(183,240,106,.15)}
+  .eyebrow-light{color:var(--lime)}
+  .eyebrow-light::before{background:var(--lime)}
+
+  /* hero visual */
+  .hero-visual{
+    position:relative;aspect-ratio:5/6;border-radius:24px;overflow:hidden;
+    background:#0c3526 center/cover no-repeat;
+    background-image:
+      linear-gradient(180deg, rgba(10,30,22,.10) 0%, rgba(10,30,22,.55) 100%),
+      url('https://re20s.com/wp-content/uploads/2025/10/T100_1300_x_750.jpg');
+    background-size:cover;background-position:center;
+    border:1px solid rgba(255,255,255,.10);
+    box-shadow:var(--shadow-lg);
+  }
+  .hero-visual .overlay-grid{
+    position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(0deg, rgba(183,240,106,.06) 0 1px, transparent 1px 36px),
+      repeating-linear-gradient(90deg, rgba(183,240,106,.06) 0 1px, transparent 1px 36px);
+    pointer-events:none;
+  }
+  .hero-visual .corner{position:absolute;width:20px;height:20px;border:1.5px solid var(--lime);opacity:.85}
+  .hero-visual .corner.tl{top:18px;left:18px;border-right:none;border-bottom:none}
+  .hero-visual .corner.tr{top:18px;right:18px;border-left:none;border-bottom:none}
+  .hero-visual .corner.bl{bottom:18px;left:18px;border-right:none;border-top:none}
+  .hero-visual .corner.br{bottom:18px;right:18px;border-left:none;border-top:none}
+  .hero-visual .hud{
+    position:absolute;top:24px;left:50%;transform:translateX(-50%);
+    display:flex;align-items:center;gap:8px;
+    background:rgba(0,0,0,.45);backdrop-filter:blur(8px);
+    padding:8px 14px;border-radius:999px;border:1px solid rgba(183,240,106,.25);
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+  }
+  .hero-visual .hud .live{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(183,240,106,.25);animation:pulse-dot 1.6s ease-in-out infinite}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.5}}
+  .hero-visual .label{
+    position:absolute;bottom:34px;left:34px;
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;
+    color:rgba(255,255,255,.85);text-transform:uppercase;
+  }
+  .hero-visual .label::before{content:"// ";color:var(--lime)}
+  .hero-visual .telemetry{
+    position:absolute;bottom:34px;right:34px;
+    display:grid;gap:4px;text-align:right;
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.06em;
+  }
+  .hero-visual .telemetry b{color:var(--lime);font-weight:500}
+
+
+
+  /* hero stats strip */
+  .hero-stats{
+    position:relative;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:rgba(0,0,0,.18);
+    padding:22px 0;
+  }
+  .hero-stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center;
+  }
+  .hero-stat .k{font-family:'Manrope';font-size:22px;font-weight:700;color:#fff;letter-spacing:-.02em}
+  .hero-stat .v{font-size:12.5px;color:rgba(255,255,255,.6);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+  @media (max-width:760px){
+    .hero-stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .hero{padding-top:110px}
+  }
+
+  /* ---------- SECTION CHROME ---------- */
+  section{padding:110px 0;position:relative}
+  @media (max-width:760px){section{padding:80px 0}}
+  .section-head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+  .section-head .right p{color:var(--ink-3);font-size:16px;line-height:1.65;max-width:48ch}
+  @media (max-width:820px){.section-head{grid-template-columns:1fr;gap:18px;align-items:start}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal[data-d="1"]{transition-delay:.08s}
+  .reveal[data-d="2"]{transition-delay:.16s}
+  .reveal[data-d="3"]{transition-delay:.24s}
+  .reveal[data-d="4"]{transition-delay:.32s}
+  .reveal[data-d="5"]{transition-delay:.40s}
+  .reveal[data-d="6"]{transition-delay:.48s}
+
+  /* ---------- PROBLEM / SOLUTION ---------- */
+  .ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+  @media (max-width:820px){.ps-grid{grid-template-columns:1fr}}
+  .ps-card{
+    border-radius:var(--radius-lg);padding:36px;
+    border:1px solid var(--line);
+    background:#fff;
+    position:relative;overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .ps-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .ps-card.dark{background:var(--green-900);color:#fff;border-color:transparent}
+  .ps-card.dark p{color:rgba(255,255,255,.78)}
+  .ps-card h3{font-size:24px;margin-bottom:18px}
+  .ps-card.dark h3{color:#fff}
+  .ps-card .tag{
+    display:inline-block;padding:6px 12px;border-radius:999px;background:var(--bg-soft);color:var(--ink-2);
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;
+  }
+  .ps-card.dark .tag{background:rgba(183,240,106,.15);color:var(--lime)}
+  .ps-list{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+  .ps-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55}
+  .ps-list .ic{flex:none;width:22px;height:22px;border-radius:6px;background:var(--bg-soft);display:grid;place-items:center;color:var(--ink-3);font-size:13px;margin-top:1px}
+  .ps-card.dark .ps-list .ic{background:rgba(183,240,106,.15);color:var(--lime)}
+
+  /* ---------- BENEFITS ---------- */
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:960px){.benefits-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:580px){.benefits-grid{grid-template-columns:1fr}}
+  .bcard{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:28px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    display:flex;flex-direction:column;gap:14px;min-height:240px;
+  }
+  .bcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--green-600)}
+  .bicon{
+    width:44px;height:44px;border-radius:12px;background:var(--green-900);color:var(--lime);
+    display:grid;place-items:center;
+  }
+  .bicon svg{width:22px;height:22px}
+  .bcard h3{font-size:19px}
+  .bcard p{font-size:14.5px;line-height:1.55;color:var(--ink-3)}
+  .bcard .n{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.12em;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line)}
+
+  /* ---------- METRICS ---------- */
+  .metrics{background:var(--green-900);color:#fff;border-radius:0;position:relative;overflow:hidden}
+  .metrics::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(closest-side at 90% 10%, rgba(31,164,99,.45), transparent 60%),
+      radial-gradient(closest-side at 0% 90%, rgba(183,240,106,.12), transparent 60%);
+    pointer-events:none;
+  }
+  .metrics h2{color:#fff;max-width:18ch}
+  .metrics .lead{color:rgba(255,255,255,.7)}
+  .metrics .eyebrow{color:var(--lime)}
+  .metrics .eyebrow::before{background:var(--lime)}
+  .metrics-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+  @media (max-width:820px){.metrics-grid{grid-template-columns:1fr}}
+  .mcard{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);
+    border-radius:var(--radius-lg);padding:30px;
+    transition:background .25s ease, border-color .25s ease;
+    display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;
+  }
+  .mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(183,240,106,.4)}
+  .mcard .ic-wrap{
+    width:100%;aspect-ratio:1/1;border-radius:20px;
+    background:#fff;
+    display:grid;place-items:center;padding:0;
+    margin-bottom:6px;overflow:hidden;
+  }
+  .mcard .ic-wrap img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;transform:scale(1.05)}
+  .mcard .big{font-size:48px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--lime);display:flex;align-items:baseline;gap:4px;margin-top:6px}
+  .mcard .big small{font-size:22px;color:var(--lime);font-weight:700}
+  .mcard h3{color:#fff;margin-top:14px;font-size:17px}
+  .mcard p{color:rgba(255,255,255,.7);font-size:14px;margin-top:8px;line-height:1.55}
+  .mnote{margin-top:28px;color:rgba(255,255,255,.55);font-size:13px;max-width:80ch;font-family:'JetBrains Mono',monospace}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media (max-width:820px){.services-grid{grid-template-columns:1fr}}
+  .scard{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    overflow:hidden;display:grid;grid-template-rows:auto 1fr;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .scard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .scard .img{
+    aspect-ratio:16/9;
+    background:var(--bg-soft) center/cover no-repeat;
+    position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .scard .img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(15,61,46,0) 40%, rgba(15,61,46,.55) 100%);
+  }
+  .scard.s1 .img{background-image:url('https://www-cdn.djiits.com/dps/c0c8f14d696bd0e9f811d5935e8f9ffb.jpg')}
+  .scard.s2 .img{background-image:url('https://www-cdn.djiits.com/dps/b06b9b7c9441d4b52c37c9a1fa7fc981.jpg')}
+  .scard.s3 .img{background-image:url('https://re20s.com/wp-content/uploads/2025/10/T100_1300_x_750.jpg')}
+  .scard.s4 .img{background-image:url('https://technodrones.co/wp-content/uploads/image-1.png')}
+  .scard .img .lbl{
+    position:absolute;left:18px;bottom:14px;z-index:2;
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.9);
+  }
+  .scard .img .lbl::before{content:"[ ";color:var(--lime)}
+  .scard .img .lbl::after{content:" ]";color:var(--lime)}
+  .scard .img .num{
+    position:absolute;top:18px;left:18px;z-index:2;
+    width:36px;height:36px;border-radius:10px;background:var(--green-900);color:var(--lime);
+    display:grid;place-items:center;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:14px;
+  }
+  .scard .img .num-bg{position:absolute;inset:0;display:grid;place-items:center;font-size:160px;font-weight:800;color:rgba(255,255,255,.10);letter-spacing:-.04em;line-height:1;z-index:2;font-family:'Manrope'}
+  .scard .body{padding:26px 28px 30px}
+  .scard h3{font-size:22px}
+  .scard p{margin-top:12px;font-size:14.5px;color:var(--ink-3);line-height:1.6}
+  .scard .feats{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .feat{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 12px;border-radius:999px;background:var(--bg-soft);color:var(--ink-2);font-size:12.5px;
+  }
+  .feat .check{color:var(--green-600);font-weight:700}
+
+  /* ---------- TECH / DJI AGRAS ---------- */
+  .tech{background:var(--bg-soft)}
+  .tech-models{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+  @media (max-width:820px){.tech-models{grid-template-columns:1fr}}
+  .model{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
+    display:grid;grid-template-columns:1.05fr 1fr;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  @media (max-width:580px){.model{grid-template-columns:1fr}}
+  .model:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+  .model .frame{
+    aspect-ratio:auto;min-height:100%;
+    background:#f3f7f1 center/cover no-repeat;
+    position:relative;border-right:1px solid var(--line);
+  }
+  @media (max-width:580px){.model .frame{aspect-ratio:4/3;border-right:none;border-bottom:1px solid var(--line)}}
+  .model.m-t50 .frame{background-image:url('https://www-cdn.djiits.com/dps/c0c8f14d696bd0e9f811d5935e8f9ffb.jpg')}
+  .model.m-t20 .frame{background-image:url('https://d288rxaqnhe6ck.cloudfront.net/ts1756271437/attachments/Product/117884/DJIT25P.tag.4.webp')}
+  .model .frame .tag{
+    position:absolute;top:14px;left:14px;
+    background:rgba(15,61,46,.85);color:var(--lime);
+    padding:6px 12px;border-radius:999px;
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  }
+  .model .frame .tag::before{content:"// "}
+  .model .body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .model h3{font-size:22px}
+  .model .sub{color:var(--ink-3);font-size:14px}
+  .model ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+  .model ul li{display:flex;gap:10px;align-items:flex-start}
+  .model ul li::before{content:"";width:14px;height:14px;flex:none;margin-top:3px;border-radius:4px;background:linear-gradient(135deg,var(--lime),var(--green-400))}
+  .tech-foot{
+    margin-top:36px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 28px;
+  }
+  .tech-foot .copy{max-width:60ch;color:var(--ink-3);font-size:14.5px}
+
+  /* ---------- PROCESS ---------- */
+  .process-wrap{position:relative;margin-top:40px}
+  .process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+  @media (max-width:980px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.process-grid{grid-template-columns:1fr}}
+  .pstep{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:24px 22px;display:flex;flex-direction:column;gap:12px;
+    position:relative;min-height:240px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .pstep:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .pstep .nr{
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green-600);letter-spacing:.1em;
+  }
+  .pstep .big{
+    width:48px;height:48px;border-radius:50%;background:var(--green-900);color:var(--lime);
+    display:grid;place-items:center;font-weight:700;font-size:18px;
+  }
+  .pstep h3{font-size:17px;line-height:1.2}
+  .pstep p{font-size:13.5px;color:var(--ink-3);line-height:1.55}
+
+  /* ---------- CROPS ---------- */
+  .crops-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:36px}
+  @media (max-width:980px){.crops-grid{grid-template-columns:repeat(4,1fr)}}
+  @media (max-width:580px){.crops-grid{grid-template-columns:repeat(2,1fr)}}
+  .crop{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    transition:transform .25s ease, border-color .25s ease, background .25s ease;
+    text-align:center;padding:14px;
+  }
+  .crop:hover{transform:translateY(-3px);border-color:var(--green-600);background:#fff}
+  .crop .glyph{
+    width:46px;height:46px;border-radius:50%;
+    background:var(--bg-soft);
+    display:grid;place-items:center;
+    color:var(--green-900);
+  }
+  .crop:hover .glyph{background:linear-gradient(135deg,var(--lime),var(--green-400));color:var(--green-900)}
+  .crop .name{font-weight:600;font-size:14px}
+  .crops-foot{margin-top:24px;color:var(--ink-3);font-size:14.5px;max-width:70ch}
+
+  /* ---------- COVERAGE ---------- */
+  .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media (max-width:880px){.coverage-grid{grid-template-columns:1fr}}
+  .map{
+    position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;
+    background:
+      radial-gradient(closest-side at 30% 30%, rgba(31,164,99,.18), transparent 60%),
+      var(--bg-soft);
+    border:1px solid var(--line);
+  }
+  .map svg{position:absolute;inset:0;width:100%;height:100%}
+  .map .pin{
+    position:absolute;width:12px;height:12px;border-radius:50%;background:var(--lime);
+    box-shadow:0 0 0 4px rgba(183,240,106,.25),0 0 0 8px rgba(183,240,106,.12);
+    transform:translate(-50%,-50%);
+  }
+  .map .pin::after{
+    content:"";position:absolute;inset:-3px;border-radius:50%;border:1px solid var(--green-600);
+    animation:ping 2.4s ease-out infinite;
+  }
+  @keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3);opacity:0}}
+  .regions{display:grid;gap:12px;margin-top:24px}
+  .region{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:18px 22px;border-radius:14px;background:#fff;border:1px solid var(--line);
+  }
+  .region:hover{border-color:var(--green-600)}
+  .region .nm{font-weight:600}
+  .region .meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-3);letter-spacing:.06em}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--bg-soft)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+  @media (max-width:880px){.about-grid{grid-template-columns:1fr;gap:30px}}
+  .about-img{
+    aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;position:relative;
+    background:#0c3526 center/cover no-repeat;
+    background-image:
+      linear-gradient(180deg,rgba(15,61,46,0) 50%, rgba(15,61,46,.65) 100%),
+      url('https://re20s.com/wp-content/uploads/2025/10/T100_1300_x_750.jpg');
+    border:1px solid var(--line);
+  }
+  .about-img .lbl{
+    position:absolute;left:18px;bottom:18px;color:rgba(255,255,255,.75);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  }
+  .about-img .lbl::before{content:"// ";color:var(--lime)}
+  .about-text p{font-size:16px;color:var(--ink-2);line-height:1.7;margin-bottom:18px}
+  .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .as{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff}
+  .as .k{font-size:22px;font-weight:700;color:var(--green-900);letter-spacing:-.02em}
+  .as .v{font-size:12px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+
+  /* ---------- DIFFERENTIATORS ---------- */
+  .diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  @media (max-width:980px){.diff-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.diff-grid{grid-template-columns:1fr}}
+  .diff{
+    border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;
+    display:flex;flex-direction:column;gap:10px;min-height:140px;
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .diff:hover{transform:translateY(-3px);border-color:var(--green-600)}
+  .diff .ic{
+    width:36px;height:36px;border-radius:10px;background:var(--bg-soft);color:var(--green-900);
+    display:grid;place-items:center;
+  }
+  .diff h3{font-size:16px}
+  .diff p{font-size:13.5px;color:var(--ink-3);line-height:1.5}
+
+  /* ---------- CTA ---------- */
+  .cta-section{background:var(--green-900);color:#fff}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  @media (max-width:880px){.cta-grid{grid-template-columns:1fr;gap:32px}}
+  .cta-section h2{color:#fff;max-width:14ch}
+  .cta-section .lead{color:rgba(255,255,255,.78);margin-top:18px}
+  .cta-section .eyebrow{color:var(--lime)}.cta-section .eyebrow::before{background:var(--lime)}
+  .cta-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .cta-meta{margin-top:36px;display:grid;gap:14px}
+  .cta-meta .row{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:14.5px}
+  .cta-meta .row .ic{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--lime)}
+  .form{
+    background:#fff;color:var(--ink);border-radius:var(--radius-lg);padding:30px;
+    box-shadow:var(--shadow-lg);
+  }
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:520px){.form .row{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+  .field label{font-size:12px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+  .field input,.field select,.field textarea{
+    font-family:inherit;font-size:15px;color:var(--ink);
+    padding:13px 14px;border-radius:12px;border:1px solid var(--line-strong);background:#fcfdfb;
+    transition:border-color .2s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green-600);background:#fff;box-shadow:0 0 0 4px rgba(31,164,99,.10)}
+  .field textarea{resize:vertical;min-height:90px}
+  .form-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px;flex-wrap:wrap}
+  .form-foot .legal{font-size:12px;color:var(--ink-3);max-width:36ch;line-height:1.4}
+
+  /* ---------- FAQ ---------- */
+  .faq-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:36px;max-width:920px;margin-left:auto;margin-right:auto}
+  .faq-item{
+    border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;
+  }
+  .faq-q{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:22px 24px;text-align:left;font-weight:600;font-size:16.5px;color:var(--ink);
+  }
+  .faq-q .ic{
+    width:30px;height:30px;border-radius:50%;background:var(--bg-soft);display:grid;place-items:center;
+    color:var(--green-900);font-weight:700;font-size:18px;flex:none;transition:transform .25s ease, background .25s ease;
+  }
+  .faq-item.open .faq-q .ic{background:var(--lime);transform:rotate(45deg)}
+  .faq-a{
+    max-height:0;overflow:hidden;transition:max-height .35s ease;
+    color:var(--ink-3);font-size:15px;line-height:1.7;
+  }
+  .faq-a-inner{padding:0 24px 22px}
+  .faq-item.open .faq-a{max-height:400px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0a2c20;color:#fff;padding:80px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+  @media (max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
+  @media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
+  .foot-brand{display:flex;flex-direction:column;gap:18px}
+  .foot-brand .logo-row{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;letter-spacing:-.02em}
+  .foot-brand .logo-row .mark{width:42px;height:42px;border-radius:10px;background:#0F3D2E;display:grid;place-items:center;overflow:hidden}
+  .foot-brand .logo-row .mark img{width:80%}
+  .foot-brand p{color:rgba(255,255,255,.65);font-size:14.5px;max-width:38ch;line-height:1.6}
+  .foot h4{color:#fff;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;font-weight:500;margin-bottom:18px}
+  .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .foot ul li a{color:rgba(255,255,255,.7);font-size:14.5px}
+  .foot ul li a:hover{color:var(--lime)}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.08);padding-top:24px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    font-size:13px;color:rgba(255,255,255,.55);
+  }
+  .socials{display:flex;gap:10px}
+  .soc{
+    width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.15);
+    display:grid;place-items:center;color:rgba(255,255,255,.7);
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .soc:hover{background:var(--lime);color:var(--green-900);border-color:var(--lime)}
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .whatsapp-fab{
+    position:fixed;right:22px;bottom:22px;z-index:60;
+    width:60px;height:60px;border-radius:50%;
+    background:#25D366;color:#fff;display:grid;place-items:center;
+    box-shadow:0 18px 30px -10px rgba(37,211,102,.5), 0 0 0 6px rgba(37,211,102,.12);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .whatsapp-fab:hover{transform:scale(1.05)}
+  .whatsapp-fab svg{width:30px;height:30px}
+  @keyframes pulse{0%,100%{box-shadow:0 18px 30px -10px rgba(37,211,102,.5), 0 0 0 6px rgba(37,211,102,.12)}50%{box-shadow:0 18px 30px -10px rgba(37,211,102,.5), 0 0 0 14px rgba(37,211,102,0)}}
+
+  /* ---------- MISC ---------- */
+  ::selection{background:var(--lime);color:var(--green-900)}
+</style>
+</head>
+<body>
+
+<!-- ================== NAVBAR ================== -->
+<header class="nav" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="AGRODRONIA">
+        <span class="mark"><img src="assets/agrodronia-mark.png" alt="" /></span>
+        <span>AGRODRONIA</span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#top">Inicio</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contacto" class="btn btn-ghost btn-small">Solicitar llamada</a>
+        <a href="https://wa.me/51900000000" class="btn btn-primary btn-small" target="_blank" rel="noopener">
+          Cotizar por WhatsApp <span class="arrow">→</span>
+        </a>
+        <button class="nav-burger" aria-label="Menú" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================== HERO ================== -->
+<section class="hero" style="padding-top:140px">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal in">
+        <span class="eyebrow eyebrow-light">Drones agrícolas · Perú</span>
+        <h1 style="margin-top:18px">
+          Fumigación agrícola con drones de <em>alta precisión</em>
+        </h1>
+        <p class="hero-sub">
+          Aplicamos productos fitosanitarios, fertilizantes e insumos agrícolas con drones de última generación, optimizando el rendimiento de tus cultivos, reduciendo desperdicios y mejorando la eficiencia en campo.
+        </p>
+        <p class="hero-note">
+          Atendemos grandes, medianas y pequeñas extensiones agrícolas en todo el Perú.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-lime" href="#contacto">Solicitar cotización <span class="arrow">→</span></a>
+          <a class="btn btn-outline-light" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="hero-badges" aria-label="Confianza">
+          <span class="badge"><span class="dot"></span>Aplicación precisa</span>
+          <span class="badge"><span class="dot"></span>Menor consumo de agua</span>
+          <span class="badge"><span class="dot"></span>Cobertura nacional</span>
+          <span class="badge"><span class="dot"></span>Tecnología DJI Agras</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal in" data-d="2" aria-hidden="true">
+        <div class="overlay-grid"></div>
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <div class="hud"><span class="live"></span> Operación en campo · DJI Agras</div>
+        <div class="label">drone-operativo · cultivo-protegido</div>
+        <div class="telemetry">
+          <div>ALT <b>3.0 m</b></div>
+          <div>VEL <b>6.5 m/s</b></div>
+          <div>RUTA <b>auto</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="container">
+      <div class="hero-stats-grid">
+        <div class="hero-stat"><div class="k">Cobertura nacional</div><div class="v">Costa · Sierra · Selva</div></div>
+        <div class="hero-stat"><div class="k">Rutas programadas</div><div class="v">Vuelo autónomo</div></div>
+        <div class="hero-stat"><div class="k">Pulverización uniforme</div><div class="v">Control de altura y dosis</div></div>
+        <div class="hero-stat"><div class="k">Operación segura</div><div class="v">Menor exposición a químicos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== PROBLEM / SOLUTION ================== -->
+<section id="problema">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">El problema</span>
+        <h2 style="margin-top:14px">El campo necesita aplicaciones más rápidas, precisas y eficientes</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>
+          Los métodos tradicionales de fumigación pueden consumir más agua, generar aplicaciones irregulares, compactar el suelo, exponer al personal a productos químicos y tomar más tiempo en grandes extensiones o zonas difíciles.
+        </p>
+      </div>
+    </div>
+
+    <div class="ps-grid">
+      <article class="ps-card reveal" data-d="1">
+        <span class="tag">Método tradicional</span>
+        <h3>Limitaciones del campo convencional</h3>
+        <p>Operaciones manuales o con maquinaria pesada presentan retos cada vez más complejos para el agricultor moderno.</p>
+        <ul class="ps-list">
+          <li><span class="ic">×</span>Mayor consumo de agua por hectárea</li>
+          <li><span class="ic">×</span>Aplicaciones irregulares y desperdicio de insumos</li>
+          <li><span class="ic">×</span>Compactación del suelo por maquinaria pesada</li>
+          <li><span class="ic">×</span>Exposición directa del personal a productos químicos</li>
+          <li><span class="ic">×</span>Tiempos prolongados en grandes extensiones</li>
+          <li><span class="ic">×</span>Difícil acceso a laderas y zonas húmedas</li>
+        </ul>
+      </article>
+
+      <article class="ps-card dark reveal" data-d="2">
+        <span class="tag">Solución AGRODRONIA</span>
+        <h3>Tratamientos aéreos de precisión</h3>
+        <p>Con drones agrícolas, AGRODRONIA permite aplicar tratamientos de forma uniforme, controlada y eficiente, llegando a zonas donde la maquinaria tradicional tiene limitaciones.</p>
+        <ul class="ps-list">
+          <li><span class="ic">✓</span>Volumen de agua optimizado por hectárea</li>
+          <li><span class="ic">✓</span>Cobertura homogénea con rutas programadas</li>
+          <li><span class="ic">✓</span>Cero compactación del terreno cultivable</li>
+          <li><span class="ic">✓</span>Operación remota, sin contacto directo</li>
+          <li><span class="ic">✓</span>Aplicación rápida en grandes superficies</li>
+          <li><span class="ic">✓</span>Acceso a laderas, encharcados e irregulares</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================== BENEFITS ================== -->
+<section id="beneficios" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Beneficios</span>
+        <h2 style="margin-top:14px">Beneficios para el agricultor</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Razones por las que deberías fumigar con drones agrícolas. Ventajas prácticas que se traducen en cultivos más sanos y operaciones más eficientes.</p>
+      </div>
+    </div>
+
+    <div class="benefits-grid">
+      <article class="bcard reveal" data-d="1">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6 6.5 6 11.5a6 6 0 1 1-12 0c0-5 6-11.5 6-11.5z"/></svg></div>
+        <h3>Ahorro de agua</h3>
+        <p>El uso de drones permite trabajar con volúmenes de agua más eficientes por hectárea frente a métodos tradicionales.</p>
+        <div class="n">// 01 · Eficiencia hídrica</div>
+      </article>
+
+      <article class="bcard reveal" data-d="2">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Aplicación homogénea</h3>
+        <p>El sistema de pulverización permite una cobertura uniforme, ayudando a que cada zona del cultivo reciba una aplicación precisa.</p>
+        <div class="n">// 02 · Uniformidad</div>
+      </article>
+
+      <article class="bcard reveal" data-d="3">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l5-9 4 5 3-4 6 8z"/><path d="M3 19h18"/></svg></div>
+        <h3>Acceso a zonas difíciles</h3>
+        <p>Ideal para laderas, terrenos húmedos, campos encharcados, parcelas irregulares o zonas donde la maquinaria no puede ingresar fácilmente.</p>
+        <div class="n">// 03 · Terrenos complejos</div>
+      </article>
+
+      <article class="bcard reveal" data-d="4">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-7 5-9 8-9s4 2 8 9"/><path d="M12 4v7"/><path d="M9 7l3-3 3 3"/></svg></div>
+        <h3>Menor gasto de producto</h3>
+        <p>La aplicación dirigida ayuda a reducir desperdicios y aprovechar mejor los fitosanitarios, fertilizantes o insumos aplicados.</p>
+        <div class="n">// 04 · Eficiencia de insumos</div>
+      </article>
+
+      <article class="bcard reveal" data-d="5">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Ahorro de tiempo</h3>
+        <p>Los drones cubren grandes superficies en menos tiempo, acelerando las labores agrícolas y reduciendo tiempos operativos.</p>
+        <div class="n">// 05 · Velocidad operativa</div>
+      </article>
+
+      <article class="bcard reveal" data-d="6">
+        <div class="bicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c5 2 8 6 8 11a8 8 0 1 1-16 0c0-5 3-9 8-11z"/><path d="M9 13s1 2 3 2 3-2 3-2"/></svg></div>
+        <h3>Cuidado del cultivo y del suelo</h3>
+        <p>Al no ingresar maquinaria pesada al campo, se evita la compactación del terreno y se reduce el daño físico sobre las plantas.</p>
+        <div class="n">// 06 · Sostenibilidad</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================== METRICS ================== -->
+<section class="metrics">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Impacto</span>
+        <h2 style="margin-top:14px">Más eficiencia en cada hectárea</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p class="lead">Resultados típicos al integrar drones agrícolas de precisión en operaciones de fumigación, fertilización y esparcido.</p>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="mcard reveal" data-d="1">
+        <div class="ic-wrap"><img src="assets/metric-3x.png" alt="3 veces más rápido por hectárea" /></div>
+        <div class="big" data-count="3" data-suffix="x">0<small>×</small></div>
+        <h3>Hasta 3× más rapidez operativa*</h3>
+        <p>Cobertura más ágil de superficie por jornada en comparación con métodos manuales convencionales.</p>
+      </div>
+      <div class="mcard reveal" data-d="2">
+        <div class="ic-wrap"><img src="assets/metric-insumos.png" alt="-25% uso de insumos" /></div>
+        <div class="big" data-count="25" data-suffix="%">0<small>%</small></div>
+        <h3>Hasta 25% menos desperdicio de insumos*</h3>
+        <p>La aplicación dirigida por rutas programadas ayuda a aprovechar mejor cada producto fitosanitario aplicado.</p>
+      </div>
+      <div class="mcard reveal" data-d="3">
+        <div class="ic-wrap"><img src="assets/metric-eficiencia.png" alt="+30% eficiencia operativa" /></div>
+        <div class="big" data-count="30" data-suffix="%">0<small>%</small></div>
+        <h3>Hasta +30% de eficiencia operativa*</h3>
+        <p>Mejor aprovechamiento de cada hectárea trabajada, con rutas planificadas y dosificación controlada.</p>
+      </div>
+    </div>
+
+    <p class="mnote">* Los resultados pueden variar según cultivo, terreno, clima, producto aplicado y condiciones de operación.</p>
+  </div>
+</section>
+
+<!-- ================== SERVICES ================== -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Servicios</span>
+        <h2 style="margin-top:14px">Servicios agrícolas con drones</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Soluciones integrales de agricultura de precisión para proteger, nutrir y desarrollar cada cultivo con la dosis correcta en el momento correcto.</p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <article class="scard s1 reveal" data-d="1">
+        <div class="img">
+          <div class="num">01</div>
+          <div class="num-bg">01</div>
+          <div class="lbl">aplicación fitosanitaria · cobertura controlada</div>
+        </div>
+        <div class="body">
+          <h3>Fumigación de alta precisión</h3>
+          <p>Aplicación uniforme de productos fitosanitarios para proteger tus cultivos frente a plagas, enfermedades y otros factores que afectan la producción. Nuestro sistema permite aplicar la dosis adecuada de forma controlada y eficiente.</p>
+          <div class="feats">
+            <span class="feat"><span class="check">✓</span> Dosis controlada</span>
+            <span class="feat"><span class="check">✓</span> Cobertura uniforme</span>
+            <span class="feat"><span class="check">✓</span> Aplicación dirigida</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="scard s2 reveal" data-d="2">
+        <div class="img">
+          <div class="num">02</div>
+          <div class="num-bg">02</div>
+          <div class="lbl">fertilización líquida y sólida</div>
+        </div>
+        <div class="body">
+          <h3>Fertilización líquida y sólida</h3>
+          <p>Aplicación eficiente de fertilizantes líquidos o esparcido de insumos sólidos, logrando una distribución pareja sobre el terreno y mejor aprovechamiento de los recursos agrícolas.</p>
+          <div class="feats">
+            <span class="feat"><span class="check">✓</span> Líquidos y granulados</span>
+            <span class="feat"><span class="check">✓</span> Distribución pareja</span>
+            <span class="feat"><span class="check">✓</span> Mayor aprovechamiento</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="scard s3 reveal" data-d="3">
+        <div class="img">
+          <div class="num">03</div>
+          <div class="num-bg">03</div>
+          <div class="lbl">esparcido aéreo de semillas e insumos</div>
+        </div>
+        <div class="body">
+          <h3>Esparcido de semillas e insumos</h3>
+          <p>Distribución aérea de semillas, fertilizantes granulados u otros insumos agrícolas, ideal para mejorar cobertura, reducir tiempos de trabajo y llegar a zonas de difícil acceso.</p>
+          <div class="feats">
+            <span class="feat"><span class="check">✓</span> Siembra eficiente</span>
+            <span class="feat"><span class="check">✓</span> Granulados</span>
+            <span class="feat"><span class="check">✓</span> Zonas difíciles</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="scard s4 reveal" data-d="4">
+        <div class="img">
+          <div class="num">04</div>
+          <div class="num-bg">04</div>
+          <div class="lbl">servicio escalable · extensiones variables</div>
+        </div>
+        <div class="body">
+          <h3>Servicio para extensiones de cualquier tamaño</h3>
+          <p>Adaptamos el servicio al tamaño y necesidad de tu terreno. Atendemos desde fundos agroindustriales hasta parcelas pequeñas, zonas irregulares o cultivos con acceso limitado.</p>
+          <div class="feats">
+            <span class="feat"><span class="check">✓</span> Grandes fundos</span>
+            <span class="feat"><span class="check">✓</span> Parcelas medianas</span>
+            <span class="feat"><span class="check">✓</span> Pequeñas extensiones</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================== TECHNOLOGY ================== -->
+<section id="tecnologia" class="tech">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Tecnología</span>
+        <h2 style="margin-top:14px">Tecnología agrícola de alto rendimiento</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Trabajamos con drones agrícolas de última generación diseñados para aplicaciones de precisión en campo. La tecnología DJI Agras permite planificación de rutas, control de altura, pulverización uniforme y operación eficiente en diferentes tipos de cultivo.</p>
+      </div>
+    </div>
+
+    <div class="tech-models">
+      <article class="model m-t50 reveal" data-d="1">
+        <div class="frame">
+          <span class="tag">modelo de flota</span>
+        </div>
+        <div class="body">
+          <h3>DJI Agras T50</h3>
+          <p class="sub">Mayor capacidad · alta autonomía · grandes extensiones</p>
+          <ul>
+            <li>Aplicaciones agrícolas precisas en jornadas extensas</li>
+            <li>Alta eficiencia operativa por hectárea</li>
+            <li>Ideal para fundos agroindustriales y campañas intensivas</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="model m-t20 reveal" data-d="2">
+        <div class="frame">
+          <span class="tag">modelo de flota</span>
+        </div>
+        <div class="body">
+          <h3>DJI Agras T20</h3>
+          <p class="sub">Ágil · maniobrable · parcelas y zonas irregulares</p>
+          <ul>
+            <li>Aplicaciones agrícolas precisas en terrenos complejos</li>
+            <li>Alta eficiencia operativa en áreas medianas</li>
+            <li>Ideal para laderas, parcelas y cultivos específicos</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="tech-foot reveal">
+      <div class="copy">El modelo ideal se define según el cultivo, extensión, tipo de aplicación y frecuencia de trabajo. Nuestro equipo te asesora para definir la mejor configuración para tu operación.</div>
+      <a href="#contacto" class="btn btn-dark btn-small">Quiero saber qué servicio necesito <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================== PROCESS ================== -->
+<section id="proceso">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Proceso</span>
+        <h2 style="margin-top:14px">¿Cómo trabajamos?</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Un proceso claro de 5 pasos para llevar tecnología de precisión a tu campo con seguridad, resultados y trazabilidad.</p>
+      </div>
+    </div>
+
+    <div class="process-wrap">
+      <div class="process-grid">
+        <article class="pstep reveal" data-d="1">
+          <div class="nr">PASO 01</div>
+          <div class="big">1</div>
+          <h3>Evaluación del cultivo</h3>
+          <p>Revisamos el tipo de cultivo, área, objetivo del tratamiento, acceso al terreno y condiciones de operación.</p>
+        </article>
+        <article class="pstep reveal" data-d="2">
+          <div class="nr">PASO 02</div>
+          <div class="big">2</div>
+          <h3>Planificación de la aplicación</h3>
+          <p>Definimos rutas, dosis, volumen de aplicación y estrategia según la necesidad del campo.</p>
+        </article>
+        <article class="pstep reveal" data-d="3">
+          <div class="nr">PASO 03</div>
+          <div class="big">3</div>
+          <h3>Preparación del equipo</h3>
+          <p>Configuramos el dron, revisamos baterías, sistema de pulverización y condiciones de seguridad.</p>
+        </article>
+        <article class="pstep reveal" data-d="4">
+          <div class="nr">PASO 04</div>
+          <div class="big">4</div>
+          <h3>Aplicación con dron</h3>
+          <p>Realizamos la fumigación, fertilización o esparcido de forma precisa, rápida y controlada.</p>
+        </article>
+        <article class="pstep reveal" data-d="5">
+          <div class="nr">PASO 05</div>
+          <div class="big">5</div>
+          <h3>Reporte y seguimiento</h3>
+          <p>Entregamos información del trabajo realizado y recomendaciones para futuras aplicaciones.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== CROPS ================== -->
+<section id="cultivos" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Cultivos</span>
+        <h2 style="margin-top:14px">Soluciones para diferentes cultivos</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Adaptamos la aplicación según el tipo de cultivo, etapa fenológica, terreno y objetivo del tratamiento — desde campañas industriales hasta parcelas familiares.</p>
+      </div>
+    </div>
+
+    <div class="crops-grid">
+      <!-- 12 crops with simple geometric glyphs -->
+      <div class="crop reveal" data-d="1"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 21c0-8 3-12 6-15 3 3 6 7 6 15"/><path d="M9 18l3-3 3 3"/></svg></div><div class="name">Arroz</div></div>
+      <div class="crop reveal" data-d="1"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="2.4"/><circle cx="15" cy="9" r="2.4"/><circle cx="12" cy="14" r="2.4"/><circle cx="9" cy="19" r="2.4"/><circle cx="15" cy="19" r="2.4"/></svg></div><div class="name">Uva</div></div>
+      <div class="crop reveal" data-d="2"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4 0-7-3-7-7 0-5 4-10 7-11 3 1 7 6 7 11 0 4-3 7-7 7z"/><circle cx="12" cy="14" r="1.6"/></svg></div><div class="name">Palta</div></div>
+      <div class="crop reveal" data-d="2"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="12" r="3"/><circle cx="15" cy="14" r="3"/><circle cx="12" cy="8" r="2"/></svg></div><div class="name">Arándano</div></div>
+      <div class="crop reveal" data-d="3"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M9 6c0 3 0 5-3 7"/><path d="M15 6c0 3 0 5 3 7"/><path d="M9 12c0 3 0 5-3 7"/><path d="M15 12c0 3 0 5 3 7"/></svg></div><div class="name">Maíz</div></div>
+      <div class="crop reveal" data-d="3"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="13" rx="6" ry="7"/><path d="M12 6c1 0 2 1 2 2"/></svg></div><div class="name">Papa</div></div>
+      <div class="crop reveal" data-d="1"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M6 3v18"/><path d="M18 3v18"/></svg></div><div class="name">Caña de azúcar</div></div>
+      <div class="crop reveal" data-d="2"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="7"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="13" r="1"/></svg></div><div class="name">Cítricos</div></div>
+      <div class="crop reveal" data-d="3"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="13" rx="4" ry="6"/><path d="M12 7v12"/></svg></div><div class="name">Café</div></div>
+      <div class="crop reveal" data-d="1"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="4" ry="8"/><path d="M12 5v14"/></svg></div><div class="name">Cacao</div></div>
+      <div class="crop reveal" data-d="2"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 21V6"/><path d="M12 6c-2-2-2-3 0-3 2 0 2 1 0 3z"/><path d="M9 21h6"/></svg></div><div class="name">Espárrago</div></div>
+      <div class="crop reveal" data-d="3"><div class="glyph"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 18c2-4 5-6 7-6s5 2 7 6"/><path d="M9 12c0-3 1-5 3-5s3 2 3 5"/></svg></div><div class="name">Hortalizas</div></div>
+    </div>
+    <p class="crops-foot">¿No ves tu cultivo? Atendemos otras especies según evaluación técnica. <a href="#contacto" style="color:var(--green-600);font-weight:600;text-decoration:underline;text-underline-offset:3px">Consúltanos →</a></p>
+  </div>
+</section>
+
+<!-- ================== COVERAGE ================== -->
+<section id="cobertura">
+  <div class="container">
+    <div class="coverage-grid">
+      <div class="reveal">
+        <span class="eyebrow">Cobertura</span>
+        <h2 style="margin-top:14px;margin-bottom:18px">Aplicamos tratamientos en todo el Perú</h2>
+        <p class="lead">AGRODRONIA brinda servicios agrícolas con drones en diferentes regiones del país, atendiendo zonas agrícolas, fundos, parcelas y operaciones agroindustriales.</p>
+
+        <div class="regions">
+          <div class="region"><span class="nm">Costa</span><span class="meta">Norte · Centro · Sur</span></div>
+          <div class="region"><span class="nm">Sierra</span><span class="meta">Valles interandinos</span></div>
+          <div class="region"><span class="nm">Selva</span><span class="meta">Alta y baja</span></div>
+          <div class="region"><span class="nm">Zonas de difícil acceso</span><span class="meta">Laderas · encharcados · irregulares</span></div>
+        </div>
+
+        <div style="margin-top:24px">
+          <a href="#contacto" class="btn btn-primary">Consultar disponibilidad en mi zona <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="map reveal" data-d="1" aria-hidden="true">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
+          <!-- stylized peru shape -->
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1FA463" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#0F3D2E" stop-opacity=".55"/>
+            </linearGradient>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M20 0H0v20" fill="none" stroke="rgba(15,61,46,.07)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="500" fill="url(#grid)"/>
+          <path d="M130 40 L175 55 L210 90 L235 130 L260 165 L290 200 L305 245 L295 290 L275 335 L255 380 L235 420 L210 455 L170 470 L140 450 L120 410 L105 360 L95 310 L100 260 L110 210 L115 160 L120 110 Z"
+                fill="url(#g1)" stroke="#1FA463" stroke-width="1.4" stroke-opacity=".6"/>
+          <!-- vertical region divider lines (suggestive) -->
+          <path d="M160 80 Q175 250 195 460" stroke="rgba(15,61,46,.18)" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+          <path d="M220 100 Q230 270 250 450" stroke="rgba(15,61,46,.18)" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+          <!-- labels -->
+          <text x="115" y="220" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F3D2E" opacity=".55">COSTA</text>
+          <text x="180" y="220" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F3D2E" opacity=".55">SIERRA</text>
+          <text x="245" y="220" font-family="JetBrains Mono, monospace" font-size="11" fill="#0F3D2E" opacity=".55">SELVA</text>
+        </svg>
+        <span class="pin" style="left:21%;top:22%"></span>
+        <span class="pin" style="left:27%;top:38%"></span>
+        <span class="pin" style="left:35%;top:52%"></span>
+        <span class="pin" style="left:48%;top:46%"></span>
+        <span class="pin" style="left:55%;top:62%"></span>
+        <span class="pin" style="left:42%;top:75%"></span>
+        <span class="pin" style="left:30%;top:84%"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== ABOUT ================== -->
+<section id="nosotros" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal" aria-hidden="true">
+        <span class="lbl">equipo en campo · operación segura</span>
+      </div>
+      <div class="about-text reveal" data-d="1">
+        <span class="eyebrow">Sobre nosotros</span>
+        <h2 style="margin-top:14px;margin-bottom:24px">Sobre AGRODRONIA</h2>
+        <p>En AGRODRONIA impulsamos el campo peruano con tecnología de precisión. Nuestra misión es ayudar a agricultores y empresas agrícolas a trabajar de forma más productiva, eficiente y sostenible mediante el uso de drones agrícolas de última generación.</p>
+        <p>Ofrecemos un servicio completo, desde la evaluación del cultivo y planificación de la aplicación hasta la ejecución en campo y seguimiento del trabajo realizado. Nuestro compromiso es brindar soluciones prácticas, responsables y adaptadas a las necesidades reales de cada agricultor.</p>
+        <p>Creemos que la tecnología debe estar al servicio del productor, ayudando a reducir desperdicios, mejorar tiempos de trabajo y proteger el rendimiento de cada campaña agrícola.</p>
+
+        <div class="about-stats">
+          <div class="as"><div class="k">Perú</div><div class="v">Cobertura nacional</div></div>
+          <div class="as"><div class="k">T50 + T20</div><div class="v">Flota DJI Agras</div></div>
+          <div class="as"><div class="k">12+</div><div class="v">Tipos de cultivo</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== DIFFERENTIATORS ================== -->
+<section id="diferenciadores">
+  <div class="container">
+    <div class="section-head">
+      <div class="left reveal">
+        <span class="eyebrow">Diferenciadores</span>
+        <h2 style="margin-top:14px">¿Por qué elegir AGRODRONIA?</h2>
+      </div>
+      <div class="right reveal" data-d="1">
+        <p>Combinamos tecnología, operación y conocimiento del campo peruano para entregar resultados reales en cada hectárea trabajada.</p>
+      </div>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff reveal" data-d="1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><h3>Tecnología de precisión</h3><p>Equipos DJI Agras con rutas programadas, control de altura y pulverización uniforme.</p></div>
+      <div class="diff reveal" data-d="2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v9z"/></svg></div><h3>Atención personalizada</h3><p>Asesoría directa y acompañamiento técnico antes, durante y después del servicio.</p></div>
+      <div class="diff reveal" data-d="3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l6-9 4 6 8-2-3 6 3 6-8-2-4 6-6-11z"/></svg></div><h3>Operación rápida y eficiente</h3><p>Más superficie cubierta por jornada, con menor desgaste humano y operativo.</p></div>
+      <div class="diff reveal" data-d="4"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C9 5 6 8 6 13a6 6 0 1 0 12 0c0-5-3-8-6-11z"/></svg></div><h3>Adaptación a cada cultivo</h3><p>Estrategia personalizada según especie, etapa fenológica y condiciones de campo.</p></div>
+      <div class="diff reveal" data-d="1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Cobertura nacional</h3><p>Costa, sierra y selva: respondemos a las necesidades de cada región agrícola.</p></div>
+      <div class="diff reveal" data-d="2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l4 4 14-14"/><path d="M3 20h18"/></svg></div><h3>Enfoque en resultados reales</h3><p>Reportes claros del trabajo realizado y recomendaciones para la próxima campaña.</p></div>
+      <div class="diff reveal" data-d="3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18s3-2 9-2 9 2 9 2"/><path d="M5 14h14"/><path d="M7 10h10"/><path d="M9 6h6"/></svg></div><h3>Menor impacto sobre el suelo</h3><p>Sin maquinaria pesada en campo: cero compactación, menos daño al cultivo.</p></div>
+      <div class="diff reveal" data-d="4"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><h3>Personal capacitado</h3><p>Operadores entrenados en aplicación agrícola, seguridad y manejo de equipos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== CTA / CONTACT ================== -->
+<section id="contacto" class="cta-section">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2 style="margin-top:14px">Lleva tecnología de precisión a tu campo</h2>
+        <p class="lead">Cuéntanos qué cultivo tienes, cuántas hectáreas necesitas tratar y en qué zona te encuentras. Te ayudaremos a definir la mejor solución para tu operación agrícola.</p>
+
+        <div class="cta-actions">
+          <a href="https://wa.me/51900000000" target="_blank" rel="noopener" class="btn btn-lime">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.1L2 22l5-1.3A11 11 0 1 0 20.5 3.5zm-8.4 17a9 9 0 0 1-4.6-1.2l-.3-.2-3 .8.8-2.9-.2-.3a9 9 0 1 1 7.3 3.8zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1s-.7.9-.9 1.1c-.2.1-.3.2-.6 0a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.1-1.3 0-.1-.2-.2-.5-.3z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a href="tel:+51900000000" class="btn btn-outline-light">Solicitar llamada</a>
+        </div>
+
+        <div class="cta-meta">
+          <div class="row"><span class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-17.7-17.8A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c0 1 .3 2 .6 3a2 2 0 0 1-.4 2.1L7.9 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .6a2 2 0 0 1 1.7 2z"/></svg>
+          </span><div><strong>+51 900 000 000</strong> — Atención de lunes a sábado</div></div>
+          <div class="row"><span class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </span><div><strong>contacto@agrodronia.pe</strong> — Respuesta en menos de 24h</div></div>
+          <div class="row"><span class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span><div><strong>Servicio en todo el Perú</strong> — Costa, sierra y selva</div></div>
+        </div>
+      </div>
+
+      <form class="form reveal" data-d="2" onsubmit="event.preventDefault();alert('¡Gracias! Te contactaremos pronto.');this.reset();">
+        <div class="row">
+          <div class="field"><label>Nombre</label><input required type="text" placeholder="Tu nombre completo" /></div>
+          <div class="field"><label>Teléfono</label><input required type="tel" placeholder="+51 9XX XXX XXX" /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Ubicación</label><input required type="text" placeholder="Región, provincia, distrito" /></div>
+          <div class="field"><label>Tipo de cultivo</label>
+            <select required>
+              <option value="">Selecciona un cultivo</option>
+              <option>Arroz</option><option>Uva</option><option>Palta</option><option>Arándano</option>
+              <option>Maíz</option><option>Papa</option><option>Caña de azúcar</option><option>Cítricos</option>
+              <option>Café</option><option>Cacao</option><option>Espárrago</option><option>Hortalizas</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Número de hectáreas</label><input type="number" min="0" placeholder="Ej. 10" /></div>
+          <div class="field"><label>Servicio requerido</label>
+            <select>
+              <option value="">Selecciona un servicio</option>
+              <option>Fumigación de alta precisión</option>
+              <option>Fertilización líquida</option>
+              <option>Fertilización sólida / esparcido</option>
+              <option>Esparcido de semillas</option>
+              <option>Evaluación y diagnóstico</option>
+              <option>No estoy seguro / asesoría</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Mensaje</label><textarea placeholder="Cuéntanos brevemente sobre tu cultivo y necesidades…"></textarea></div>
+        <div class="form-foot">
+          <p class="legal">Al enviar aceptas nuestra política de privacidad. No compartimos tus datos con terceros.</p>
+          <button class="btn btn-primary" type="submit">Enviar cotización <span class="arrow">→</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================== FAQ ================== -->
+<section id="faq" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head" style="grid-template-columns:1fr;text-align:center;max-width:760px;margin:0 auto 36px">
+      <div class="reveal">
+        <span class="eyebrow" style="justify-content:center;display:inline-flex">Preguntas frecuentes</span>
+        <h2 style="margin-top:14px">Resolvemos tus dudas sobre fumigación con drones</h2>
+      </div>
+    </div>
+
+    <div class="faq-grid">
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Qué es la fumigación agrícola con drones? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Es la aplicación de productos fitosanitarios, fertilizantes u otros insumos agrícolas mediante drones especializados, permitiendo una distribución precisa, rápida y uniforme sobre el cultivo.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Cuánto cuesta fumigar con dron por hectárea? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">El precio depende del cultivo, ubicación, número de hectáreas, tipo de producto, dificultad del terreno y frecuencia del servicio. Lo recomendable es solicitar una cotización personalizada.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Qué ventajas tiene fumigar con drones? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Permite ahorrar tiempo, reducir desperdicios, mejorar la uniformidad de aplicación, ingresar a zonas difíciles y disminuir la exposición directa del personal a productos químicos.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Los drones pueden fumigar en terrenos irregulares? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. Los drones agrícolas son ideales para laderas, zonas húmedas, campos con acceso limitado y terrenos donde la maquinaria tradicional puede tener dificultades.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Atienden pequeñas parcelas? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. AGRODRONIA adapta el servicio a grandes, medianas y pequeñas extensiones agrícolas.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Qué productos se pueden aplicar con drones agrícolas? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Se pueden aplicar diferentes productos fitosanitarios, fertilizantes líquidos, bioestimulantes y otros insumos agrícolas, siempre siguiendo las indicaciones técnicas del producto y del cultivo.</div></div>
+      </article>
+      <article class="faq-item reveal" data-d="1">
+        <button class="faq-q" aria-expanded="false">¿Atienden en todo el Perú? <span class="ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. AGRODRONIA brinda servicios en distintas regiones agrícolas del Perú, sujeto a disponibilidad operativa y evaluación de la zona.</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================== FOOTER ================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand foot">
+        <div class="logo-row">
+          <span class="mark"><img src="assets/agrodronia-mark.png" alt="" /></span>
+          AGRODRONIA
+        </div>
+        <p>Tecnología al servicio del campo. Aplicaciones agrícolas de precisión con drones de última generación para fundos, agroindustria y agricultores en todo el Perú.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.1L2 22l5-1.3A11 11 0 1 0 20.5 3.5zm-8.4 17a9 9 0 0 1-4.6-1.2l-.3-.2-3 .8.8-2.9-.2-.3a9 9 0 1 1 7.3 3.8z"/></svg></a>
+          <a href="#" class="soc" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="soc" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7c0-1.1.4-2 2-2h2V1.5A20 20 0 0 0 14 1c-3 0-5 2-5 5v4H6v4h3v8z"/></svg></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.7v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.8-3s-2 1.4-2 2.9V21h-4z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="foot">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Fumigación de precisión</a></li>
+          <li><a href="#servicios">Fertilización líquida</a></li>
+          <li><a href="#servicios">Fertilización sólida</a></li>
+          <li><a href="#servicios">Esparcido de semillas</a></li>
+          <li><a href="#cultivos">Cultivos atendidos</a></li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#nosotros">Sobre AGRODRONIA</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#tecnologia">Tecnología</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#cobertura">Cobertura</a></li>
+        </ul>
+      </div>
+
+      <div class="foot">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/51900000000">WhatsApp: +51 900 000 000</a></li>
+          <li><a href="mailto:contacto@agrodronia.pe">contacto@agrodronia.pe</a></li>
+          <li><a href="#contacto">Solicitar cotización</a></li>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>© AGRODRONIA. Tecnología agrícola con drones para el campo peruano.</div>
+      <div>Tecnología al servicio del campo.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/51900000000" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Cotizar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.1L2 22l5-1.3A11 11 0 1 0 20.5 3.5zm-8.4 17a9 9 0 0 1-4.6-1.2l-.3-.2-3 .8.8-2.9-.2-.3a9 9 0 1 1 7.3 3.8zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1s-.7.9-.9 1.1c-.2.1-.3.2-.6 0a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.1-1.3 0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+  // --- Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    for (const e of entries){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // --- Nav shadow on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // --- FAQ accordion
+  document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  // --- Animated metric counters
+  const fmt = (n, suffix) => {
+    if (suffix === '%') return Math.round(n) + '%';
+    if (suffix === 'x') return Math.round(n) + '×';
+    return Math.round(n) + (suffix || '');
+  };
+  const counters = document.querySelectorAll('.mcard .big[data-count]');
+  const co = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      const el = e.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const dur = 1400;
+      const start = performance.now();
+      function tick(t) {
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1-p, 3);
+        const val = eased * target;
+        el.innerHTML = fmt(val, suffix === '%' ? '' : '') + (suffix === 'x' ? '<small>×</small>' : suffix === '%' ? '<small>%</small>' : '');
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      co.unobserve(el);
+    }
+  }, { threshold: .4 });
+  counters.forEach(c => co.observe(c));
+</script>
+
+</body>
+</html>
