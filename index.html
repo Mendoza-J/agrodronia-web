@@ -112,7 +112,6 @@
     border-radius:999px;
     padding:10px 10px 10px 22px;
     box-shadow:var(--shadow-sm);
-    overflow:hidden;
   }
   .nav.scrolled .nav-inner{background:rgba(248,250,246,.92)}
   .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:18px}
@@ -625,7 +624,6 @@
   /* Mobile nav dropdown */
   @media (max-width:960px){
     .nav-inner{position:relative;padding:8px 10px 8px 16px}
-    .nav-cta .btn-primary{display:none}
     .nav-links.open{
       display:flex;flex-direction:column;
       position:absolute;top:calc(100% + 10px);left:0;right:0;
@@ -734,9 +732,6 @@
       </nav>
       <div class="nav-cta">
         <a href="#contacto" class="btn btn-ghost btn-small">Solicitar llamada</a>
-        <a href="https://wa.me/51900000000" class="btn btn-primary btn-small" target="_blank" rel="noopener">
-          Cotizar por WhatsApp <span class="arrow">→</span>
-        </a>
         <button class="nav-burger" aria-label="Menú" id="navBurger"><span></span></button>
       </div>
     </div>
